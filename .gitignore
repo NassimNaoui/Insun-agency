@@ -25,4 +25,5 @@ dist-ssr
 
 # assets
 
-./src/assets
+src/assets/
+
