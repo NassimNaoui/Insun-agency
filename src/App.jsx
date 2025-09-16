@@ -7,8 +7,9 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <NavBar></NavBar>
+      <div className="bg-[url(./src/assets/BACKGROUND/Rectangle.png)] bg-no-repeat bg-cover bg-center h-screen">
+        <NavBar></NavBar>
+      </div>
     </>
   );
 }

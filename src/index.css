@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+:root {
+  --orange-insun: #ff5e0b;
+  --anthracite: #2e2e2e;
+}

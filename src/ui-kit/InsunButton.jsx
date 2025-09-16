@@ -1,10 +1,12 @@
 function NavBarButton({ value, onClick }) {
   return (
-    <div className="flex py-[12px] px-[24px] items-center bg-white/75 border-1 rounded-[46px] text-white">
-      <button type="button" className="" onClick={onClick}>
-        {value}
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={onClick}
+      className="bg-white/25 border-1 rounded-full text-white h-fit px-[24px] py-[12px] transition duration-300 ease-out hover:bg-[var(--orange-insun)] focus:bg-[var(--orange-insun)]"
+    >
+      {value}
+    </button>
   );
 }
 
