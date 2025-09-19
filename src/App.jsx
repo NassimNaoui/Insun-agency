@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import NavBar from "./component/InsunNavBar";
+import Accueil from "./pages/Accueil";
+import Decouvrir from "./pages/Decouvrir";
+import Createurs from "./pages/Createurs";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div className="bg-[url(./src/assets/BACKGROUND/Rectangle.png)] bg-no-repeat bg-cover bg-center h-screen">
-        <NavBar></NavBar>
-      </div>
+      <NavBar></NavBar>
+      <Accueil></Accueil>
+      <Decouvrir></Decouvrir>
+      <Createurs></Createurs>
     </>
   );
 }
