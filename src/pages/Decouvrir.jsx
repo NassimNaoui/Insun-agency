@@ -7,34 +7,40 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Decouvrir() {
   const sectionRef = useRef(null);
   const childRef = useRef(null);
-  const boxRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top", // déclenche quand la section arrive en haut
-          end: "+=100%", // durée pendant laquelle la section est "pinned"
+          start: "top top",
+          end: "+=100%",
           scrub: true,
           pin: true,
           onUpdate: (self) => {
-            console.log(self.progress);
-            const p = self.progress;
-            const center = Math.round(p * 100); // centre du bloc
-            const half = 10; // demi-largeur en %
-            const left = Math.max(0, center - half);
-            const right = Math.min(100, center + half);
+            const p = self.progress; // 0 → 1
+            const children = childRef.current.children;
 
-            gsap.set(childRef.current, {
-              background: `linear-gradient(to right, transparent ${left}%, #FFFFFF ${left}%, #FFFFFF ${right}%, transparent ${right}%)`,
-            });
+            for (let i = 0; i < children.length; i++) {
+              // chaque enfant prend un gradient qui "avance" selon la progression
+              const progressStart = i * 0.2; // ajuster selon le nombre d'enfants
+              const progressEnd = progressStart + 0.2;
+
+              // calcul du pourcentage à remplir
+              let fill =
+                ((p - progressStart) / (progressEnd - progressStart)) * 100;
+              fill = Math.max(0, Math.min(100, fill));
+
+              children[
+                i
+              ].style.background = `linear-gradient(to right, #fff ${fill}%, rgba(156,163,175,0.3) ${fill}%)`;
+            }
           },
         },
       });
     }, sectionRef);
 
-    return () => ctx.revert(); // clean up sur unmount
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -44,14 +50,18 @@ export default function Decouvrir() {
       className="bg-[url(./src/assets/BACKGROUND/Rectangle_2.png)] bg-no-repeat bg-cover bg-center rotate h-screen -m-px"
     >
       <div className="flex flex-col h-full justify-center px-50 py-25">
-        <div className="h-[80%] w-auto bg-red-400">
+        <div className="h-[80%] w-auto ">
           <h1 className="font-title text-white text-[36px]">Notre mission</h1>
-          <div className="h-full w-auto bg-amber-400 flex flex-col px-25">
+          <div className="h-full w-auto flex flex-col px-15 items-center justify-center">
             <div
+              className="h-fit w-full grid grid-cols-[28px_1fr_28px_1fr_28px] items-center relative"
               ref={childRef}
-              className="w-full h-15 flex flex-col justify-cente"
             >
-              <div className="w-full flex-1 bg-white/0"></div>
+              <div className="w-7 h-7 rounded-full bg-gray-300/30"></div>
+              <div className="h-2 w-auto bg-gray-300/30"></div>
+              <div className="w-7 h-7 rounded-full bg-gray-300/30"></div>
+              <div className="h-2 w-auto bg-gray-300/30"></div>
+              <div className="w-7 h-7 rounded-full bg-gray-300/30"></div>
             </div>
             <div className="w-full bg-gray-500 flex-1"></div>
           </div>
