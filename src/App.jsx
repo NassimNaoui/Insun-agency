@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import NavBar from "./component/InsunNavBar";
 import Accueil from "./pages/Accueil";
 import Decouvrir from "./pages/Decouvrir";
 import Createurs from "./pages/Createurs";
+import DecouvrirValeurs from "./pages/DecouvrirValeurs";
+
 import "./App.css";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <NavBar></NavBar>
       <Accueil></Accueil>
       <Decouvrir></Decouvrir>
+      <DecouvrirValeurs></DecouvrirValeurs>
       <Createurs></Createurs>
     </>
   );

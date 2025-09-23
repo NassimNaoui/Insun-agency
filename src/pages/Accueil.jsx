@@ -24,7 +24,7 @@ export default function Accueil() {
       id="Accueil"
       className="bg-[url(./src/assets/BACKGROUND/Rectangle.png)] bg-no-repeat bg-cover bg-center h-screen"
     >
-      <div className="h-full py-100 px-50">
+      <div className="h-full flex flex-col justify-center items-start px-50">
         <img
           src="./src/assets/SVG/Logotype/INSUN_logo-10.svg"
           alt="LOGO INSUN TYPOGRAPHIQUE"

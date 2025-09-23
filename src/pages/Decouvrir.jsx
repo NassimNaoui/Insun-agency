@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CallToAction } from "../ui-kit/InsunButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,7 +94,7 @@ export default function Decouvrir() {
     >
       <div className="flex flex-col h-full justify-start gap-10 sm:gap-16 lg:gap-20 px-4 sm:px-8 md:px-12 lg:px-20 py-10 sm:py-16 lg:py-20">
         {/* Titre */}
-        <h1 className="font-title text-white text-2xl sm:text-3xl lg:text-4xl">
+        <h1 className="font-title text-white pt-25 text-2xl sm:text-3xl lg:text-4xl">
           Notre mission
         </h1>
 
@@ -160,6 +161,7 @@ export default function Decouvrir() {
             </p>
           </div>
         </div>
+        <CallToAction value={"Contactez-nous"} />
       </div>
     </div>
   );

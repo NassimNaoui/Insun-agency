@@ -1,4 +1,4 @@
-import NavBarButton from "../ui-kit/InsunButton";
+import { NavBarButton } from "../ui-kit/InsunButton";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // icons burger/cross
 
