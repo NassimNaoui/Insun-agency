@@ -13,7 +13,7 @@ export default function NavBar() {
         <img
           src="./src/assets/SVG/Logo/INSUN_logo-12.svg"
           alt="LOGO INSUN"
-          className="w-12 md:w-[86px]"
+          className="w-12 md:w-[70px]"
         />
 
         {/* Desktop Nav */}
