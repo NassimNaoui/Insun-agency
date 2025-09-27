@@ -26,4 +26,5 @@ dist-ssr
 # assets
 
 src/assets/
+src/data/
 public/icons/
