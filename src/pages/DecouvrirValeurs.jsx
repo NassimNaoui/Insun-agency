@@ -28,14 +28,14 @@ export default function DecouvrirValeurs() {
 
   return (
     <div
-      className="relative h-screen before:content-[''] before:absolute before:inset-0 
+      className="relative lg:h-screen before:content-[''] before:absolute before:inset-0 
                         before:bg-[url('./src/assets/BACKGROUND/Rectangle_2.png')] 
                         before:bg-no-repeat before:bg-cover before:bg-center 
                         before:rotate-x-180 -mt-px"
     >
       <div className="relative z-9 flex flex-col justify-between items-center h-full">
-        <div className="sm:px-8 md:px-12 lg:px-20 w-full h-full flex flex-col justify-between items-center align-middle">
-          <CallToAction value={"Contactez-nous"} />
+        <div className="sm:px-8 md:px-12 lg:px-20 w-full h-full flex flex-col justify-evenly items-center align-middle">
+          {/*<CallToAction value={"Contactez-nous"} />*/}
           <h1 className="text-2xl sm:text-3xl lg:text-4xl text-white self-start font-title">
             Nos valeurs
           </h1>
@@ -43,7 +43,7 @@ export default function DecouvrirValeurs() {
             className="w-full h-[70%] grid gap-4
             sm:grid-cols-1 sm:grid-rows-5
             md:grid-cols-2 md:grid-rows-3
-            lg:grid-cols-4 lg:grid-rows-2"
+            lg:grid-cols-4 lg:grid-rows-2 self-stretch"
           >
             <ValueCard
               className="lg:col-span-2 lg:row-span-1"

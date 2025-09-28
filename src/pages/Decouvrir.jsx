@@ -160,6 +160,9 @@ export default function Decouvrir() {
               idées en véritables réussites.
             </p>
           </div>
+          <div className="absolute bottom-2">
+            <CallToAction value={"Contactez-nous"} />
+          </div>
         </div>
       </div>
     </div>
