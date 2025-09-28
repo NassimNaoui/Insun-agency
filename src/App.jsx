@@ -4,6 +4,7 @@ import Accueil from "./pages/Accueil";
 import Decouvrir from "./pages/Decouvrir";
 import Createurs from "./pages/Createurs";
 import DecouvrirValeurs from "./pages/DecouvrirValeurs";
+import RejoinsNous from "./pages/RejoinsNous";
 
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
       <Decouvrir></Decouvrir>
       <DecouvrirValeurs></DecouvrirValeurs>
       <Createurs></Createurs>
+      <RejoinsNous></RejoinsNous>
     </>
   );
 }

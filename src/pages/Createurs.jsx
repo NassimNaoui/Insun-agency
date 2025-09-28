@@ -1,6 +1,10 @@
+import { useState } from "react";
 import GridCreators from "../component/GridCreators";
 
 export default function Createurs() {
+  const [selectedCreator, setSelectedCreator] = useState();
+  console.log(selectedCreator);
+
   return (
     <div
       id="Créateurs"
@@ -13,7 +17,7 @@ export default function Createurs() {
         <h1 className="self-start font-title text-white  text-2xl sm:text-3xl lg:text-4xl sm:px-8 md:px-12 lg:px-20">
           Nos créateurs
         </h1>
-        <GridCreators></GridCreators>
+        <GridCreators setSelectedCreator={setSelectedCreator}></GridCreators>
       </div>
     </div>
   );
