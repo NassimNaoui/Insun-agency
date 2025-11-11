@@ -11,11 +11,13 @@ export default function CreatorCard({
     <div
       className="
         relative 
-        w-[250px] h-[380px]        /* base mobile */
-        sm:w-[300px] sm:h-[420px]  /* small screens */
-        lg:w-[350px] lg:h-[500px]  /* large screens */
+        w-[225px] h-[350px]        /* base mobile */
+        sm:w-[275px] sm:h-[400px]  /* small screens */
+        lg:w-[290px] lg:h-[425px]  /* large screens */
+        xl:w-[300px] xl:h-[450px]  /* extra large screens (laptop)*/
+        2xl:w-[350px] 2xl:h-[500px]
         bg-[#2E2E2E]/20 rounded-3xl
-        border border-[#676767] 
+        border border-[#9f9f9f] 
         hover:shadow-[4px_4px_50px_0_#FF5E0B]
       "
     >

@@ -5,6 +5,7 @@ import Decouvrir from "./pages/Decouvrir";
 import Createurs from "./pages/Createurs";
 import DecouvrirValeurs from "./pages/DecouvrirValeurs";
 import RejoinsNous from "./pages/RejoinsNous";
+import DecouvrirSimplifie from "./pages/DecouvrirSimplifie";
 
 import "./App.css";
 
@@ -13,7 +14,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <Accueil></Accueil>
-      <Decouvrir></Decouvrir>
+      <DecouvrirSimplifie></DecouvrirSimplifie>
       <DecouvrirValeurs></DecouvrirValeurs>
       <Createurs></Createurs>
       <RejoinsNous></RejoinsNous>

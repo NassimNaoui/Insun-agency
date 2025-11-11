@@ -12,6 +12,9 @@ export default function GridCreators({ setSelectedCreator }) {
       md:gap-4
       lg:grid-cols-3
       lg:gap-8
+      xl:grid-cols-4
+      xl:gap-10
+      grid-2xl
       "
     >
       {creatorsData.map((creator, index) => (

@@ -8,16 +8,19 @@ export default function Createurs() {
   return (
     <div
       id="Créateurs"
-      className="relative lg:h-screen w-screen before:content-[''] before:absolute before:inset-0 
-                      before:bg-[url('./src/assets/BACKGROUND/Rectangle_2.png')] 
-                      before:bg-no-repeat before:bg-cover before:bg-center 
-                      before:rotate-y-180"
+      className="min-h-screen w-screen flex bg-[url('./src/assets/BACKGROUND/svg-bottom-left.svg')] 
+                 bg-no-repeat bg-cover bg-center -mt-px pb-5"
     >
-      <div className="relative z-9 flex flex-col items-center justify-evenly h-full w-full">
-        <h1 className="self-start font-title text-white  text-2xl sm:text-3xl lg:text-4xl sm:px-8 md:px-12 lg:px-20">
+      <div className="pt-20 flex-1 flex flex-col items-center justify-evenly px-2 gap-5 sm:px-8 md:px-12 lg:px-20">
+        <h1 className="self-start font-title text-white font-title text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl">
           Nos créateurs
         </h1>
-        <GridCreators setSelectedCreator={setSelectedCreator}></GridCreators>
+        <div className="flex flex-col gap-5 items-center">
+          <div className="text-white">
+            Petite phrase pour parler de nos supers créateurs.
+          </div>
+          <GridCreators setSelectedCreator={setSelectedCreator}></GridCreators>
+        </div>
       </div>
     </div>
   );

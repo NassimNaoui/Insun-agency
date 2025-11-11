@@ -3,40 +3,60 @@ import { CallToAction } from "../ui-kit/InsunButton";
 export default function RejoinsNous() {
   return (
     <div
-      className="relative h-screen w-screen before:content-[''] before:absolute before:inset-0 
-        before:bg-[url('./src/assets/BACKGROUND/Rectangle_2.png')] 
-        before:bg-no-repeat before:bg-cover before:bg-center 
-        before:rotate-y-180 before:rotate-x-180 -mt-px"
+      className="min-h-screen flex flex-col w-screen
+        bg-[url('./src/assets/BACKGROUND/svg-top-left.svg')] 
+        bg-no-repeat bg-cover bg-center -mt-px"
     >
-      <div className="relative flex flex-col-reverse lg:flex-row w-full h-full z-9">
+      <div className="flex-1 flex flex-col-reverse justify-between sm:flex-row">
         {/* Texte */}
-        <div className="sm:px-8 md:px-12 lg:px-20 w-full lg:w-[60%] h-1/2 lg:h-full flex flex-col justify-evenly">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-white self-start font-title">
+        <div className="flex-1 px-2 sm:px-8 md:px-12 lg:px-20 w-full sm:w-[60%] flex flex-col justify-evenly py-8 sm:py-0">
+          <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl text-white font-title mb-4">
             Rejoins l'équipe
           </h1>
-          <p className="font-text text-white sm:text-lg lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
+          <p className="font-text text-white text-sm sm:text-base lg:text-xl mb-6">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut et massa
             mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
             fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
             vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
             ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
             nibh nibh, at maximus ante.
           </p>
-          <CallToAction value={"Rejoins nous"}></CallToAction>
+          <CallToAction value="Rejoins nous" />
         </div>
 
         {/* Image */}
         <div
-          className="relative h-full bg-cover bg-center w-[40%]"
+          className="
+            w-full h-64 sm:h-auto sm:w-[40%]
+            bg-cover bg-center
+          "
           style={{
             backgroundImage:
               "url('./src/assets/PICTURE/Pexels Photo by cottonbro studio.png')",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
+            WebkitMaskImage: `
+              linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(0,0,0,0.4) 10%,
+                black 35%,
+                black 65%,
+                rgba(0,0,0,0.4) 90%,
+                transparent 100%
+              )
+            `,
             WebkitMaskRepeat: "no-repeat",
             WebkitMaskSize: "cover",
-            maskImage:
-              "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
+            maskImage: `
+              linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(0,0,0,0.4) 10%,
+                black 35%,
+                black 65%,
+                rgba(0,0,0,0.4) 90%,
+                transparent 100%
+              )
+            `,
             maskRepeat: "no-repeat",
             maskSize: "cover",
           }}

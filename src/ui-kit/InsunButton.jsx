@@ -19,12 +19,23 @@ function CallToAction({ value, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="self-center bg-white border border-[rgba(202,202,202,0.60)] flex flex-row gap-[10px] justify-center items-center w-fit rounded-full text-[var(--anthracite)] h-fit px-[24px]
-    py-[16px] cursor-pointer
-    transition duration-300 font-title ease-out hover:bg-[var(--orange-insun)] hover:text-white"
+      className="
+        self-center
+        bg-white 
+        border border-[rgba(202,202,202,0.6)]
+        flex flex-row items-center justify-center gap-2
+        rounded-full
+        text-[var(--anthracite)] font-title
+        px-6 py-3
+        text-sm sm:text-base md:text-lg
+        cursor-pointer
+        transition duration-300 ease-out
+        hover:bg-[var(--orange-insun)] hover:text-white
+        active:scale-95
+      "
     >
-      <div>{value}</div>
-      <ArrowIcon className="" />
+      <span className="whitespace-nowrap">{value}</span>
+      <ArrowIcon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
     </button>
   );
 }

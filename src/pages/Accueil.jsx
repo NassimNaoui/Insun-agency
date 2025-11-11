@@ -22,11 +22,13 @@ export default function Accueil() {
     <div
       id="Accueil"
       className="
-        bg-[url(./src/assets/BACKGROUND/Rectangle.png)] 
+        relative
+        bg-[url(./src/assets/BACKGROUND/svg-accueil-fin.svg)] 
         bg-no-repeat bg-cover bg-center 
         h-screen
       "
     >
+      {/* Contenu principal */}
       <div
         className="
           h-full flex flex-col justify-center items-start
@@ -41,14 +43,13 @@ export default function Accueil() {
         />
 
         <div
-          // key={index}
           className="
             py-6 sm:py-8 md:py-10 
             text-white font-title capitalize animate-bouncy
             text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
           "
         >
-          direction artistique {/* listExpertises[index] */}
+          direction artistique
         </div>
 
         <div
@@ -64,6 +65,9 @@ export default function Accueil() {
           tellus..
         </div>
       </div>
+
+      {/* Dégradé fondu en bas */}
+      <div className="absolute bottom-0 left-0 w-full h-15 bg-gradient-to-b from-[#2E2E2E]/0 via-[#2E2E2E]/15 via-[#2E2E2E]/35  to-[#2E2E2E]/60   pointer-events-none"></div>
     </div>
   );
 }
