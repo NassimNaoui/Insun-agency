@@ -8,7 +8,7 @@ export default function NavBar() {
 
   return (
     <div className="fixed top-0 w-full z-10">
-      <div className="flex flex-row items-center py-4 px-6 md:py-6 md:px-12 bg-gradient-to-b from-[#333333] to-[#48484800]">
+      <div className="flex flex-row items-center py-4 px-6 md:py-6 md:px-12 bg-gradient-to-b from-[var(--anthracite)]/65 to-[var(--anthracite)]/5 backdrop-blur-xs">
         {/* Logo */}
         <img
           src="./src/assets/SVG/Logo/INSUN_logo-12.svg"

@@ -4,11 +4,11 @@ export default function DecouvrirSimplifie() {
   return (
     <div
       id="Découvrir"
-      className="relative bg-[url(./src/assets/BACKGROUND/svg-bottom-right.svg)] bg-no-repeat bg-cover bg-center h-screen max-h-[1200px] -mt-px"
+      className="relative bg-[url(./src/assets/BACKGROUND/svg-bottom-right.svg)] flex flex-col bg-no-repeat bg-cover bg-center min-h-screen max-h-[1200px] -mt-px"
     >
       {/* Fade en haut */}
       <div className="absolute top-0 left-0 w-full h-15 bg-gradient-to-t from-[#2E2E2E]/0 via-[#2E2E2E]/15 via-[#2E2E2E]/35  to-[#2E2E2E]/60  pointer-events-none"></div>
-      <div className="flex flex-col  h-full  justify-evenly  px-2 pt-8 sm:px-8 md:px-12 lg:px-20 sm:py-16 lg:py-24">
+      <div className="flex-1 flex flex-col justify-evenly gap-4 sm:gap-0 mt-16 sm:mt-24 px-2 sm:px-8 md:px-12 lg:px-20">
         {/* Titre */}
         <h1 className="font-title text-white text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl">
           Notre mission

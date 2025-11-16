@@ -37,17 +37,18 @@ export default function BigCreatorCard({ selectedCreator, onClick }) {
       <img
         className="w-full sm:w-[45%] 
         h-[220px] sm:h-full 
-        object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-tr-none
+        object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-2xl
         bg-gradient-to-b from-[var(--anthracite)] to-[var(--anthracite)]/75"
         src={`/creator/${selectedCreator.creator}.png`}
         alt={`${selectedCreator.creator} picture`}
       />
-      <div className="flex flex-col flex-1 p-5 justify-between">
+      <div className="flex flex-col flex-1 sm:flex-row p-2 sm:p-5">
         <ExitIcon
           onClick={onClick}
           className="
-              
               self-end
+              sm:self-start
+              sm:order-2
               cursor-pointer 
               transition-all 
               duration-300 
@@ -56,15 +57,24 @@ export default function BigCreatorCard({ selectedCreator, onClick }) {
               w-5 sm:w-6 md:w-7
             "
         />
-        <h3 className="text-3xl sm:text-4xl font-title text-[var(--orange-insun)] font-bold uppercase ">
-          {selectedCreator.creator}
-        </h3>
-        <SocialNetworksKpis
-          socialNetworksDetails={selectedCreator.socialNetworksDetails}
-        />
-        <p className="font-text sm:mb-10">{selectedCreator.description}</p>
-        <div className="self-end">
-          <CallToAction value={"Collaborer"} onClick={onClick} variant="dark" />
+
+        <div className="flex flex-col flex-1 gap-4 sm:gap-0 sm:justify-evenly">
+          <h3 className="text-xl sm:text-4xl font-title text-[var(--orange-insun)] font-bold uppercase ">
+            {selectedCreator.creator}
+          </h3>
+          <SocialNetworksKpis
+            socialNetworksDetails={selectedCreator.socialNetworksDetails}
+          />
+          <p className="text-sm sm:text-base font-text sm:mb-10">
+            {selectedCreator.description}
+          </p>
+          <div className="self-end">
+            <CallToAction
+              value={"Collaborer"}
+              onClick={onClick}
+              variant="dark"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -78,7 +88,10 @@ function SocialNetworksKpis({ socialNetworksDetails }) {
         {Object.entries(socialNetworksDetails).map(([socialNetwork, infos]) => (
           <div className="flex flex-row gap-2">
             <Icon name={socialNetwork} />
-            <div className=" font-text text-[#1E1E1E]" key={socialNetwork}>
+            <div
+              className="text-xs sm:text-base font-text text-[#1E1E1E]"
+              key={socialNetwork}
+            >
               {formatViews(infos.followers)}
             </div>
           </div>
@@ -91,6 +104,8 @@ function SocialNetworksKpis({ socialNetworksDetails }) {
 function Icon({ name }) {
   const SvgIcon = socialNetworkIcons[name];
   return SvgIcon ? (
-    <SvgIcon className={"h-[24px] w-[24px] fill-[#1E1E1E]"} />
+    <SvgIcon
+      className={"h-[16px] w-[16px]   sm:h-[24px] sm:w-[24px] fill-[#1E1E1E]"}
+    />
   ) : null;
 }

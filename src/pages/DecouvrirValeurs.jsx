@@ -29,7 +29,7 @@ export default function DecouvrirValeurs() {
       className="min-h-screen flex  bg-[url('./src/assets/BACKGROUND/svg-top-right.svg')] 
                  bg-no-repeat bg-cover bg-center -mt-px pb-5"
     >
-      <div className="flex-1 flex flex-col justify-evenly items-center px-2 gap-5 sm:px-8 md:px-12 lg:px-20">
+      <div className="flex-1 flex flex-col justify-evenly items-center px-2 gap-5 mt-16 sm:mt-24 sm:px-8 md:px-12 lg:px-20">
         <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl text-white self-start font-title">
           Nos valeurs
         </h1>
