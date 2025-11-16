@@ -9,7 +9,7 @@ export default function RejoinsNous() {
     >
       <div className="flex-1 flex flex-col-reverse justify-between sm:flex-row">
         {/* Texte */}
-        <div className="flex-1 px-2 sm:px-8 md:px-12 lg:px-20 w-full sm:w-[60%] flex flex-col justify-evenly py-8 sm:py-0">
+        <div className="flex-1 px-2 max-w-[1300px] sm:px-8 md:px-12 lg:px-20 w-full sm:w-[60%] flex flex-col justify-evenly py-8 sm:py-0">
           <h1 className="text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl text-white font-title mb-4">
             Rejoins l'équipe
           </h1>
@@ -27,7 +27,7 @@ export default function RejoinsNous() {
         {/* Image */}
         <div
           className="
-            w-full h-64 sm:h-auto sm:w-[40%]
+            w-full h-64 max-w-[900px] sm:h-auto sm:w-[40%]
             bg-cover bg-center
           "
           style={{

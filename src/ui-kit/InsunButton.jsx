@@ -14,14 +14,19 @@ function NavBarButton({ value, onClick }) {
   );
 }
 
-function CallToAction({ value, onClick }) {
+function CallToAction({ value, onClick, variant = "default" }) {
+  const variants = {
+    default: "bg-white hover:bg-[var(--orange-insun)] hover:text-white",
+    dark: "bg-[var(--anthracite)] text-white hover:bg-[var(--orange-insun)] hover:text-white",
+  };
+
   return (
     <button
       type="button"
       onClick={onClick}
-      className="
+      className={`
         self-center
-        bg-white 
+        
         border border-[rgba(202,202,202,0.6)]
         flex flex-row items-center justify-center gap-2
         rounded-full
@@ -29,10 +34,10 @@ function CallToAction({ value, onClick }) {
         px-6 py-3
         text-sm sm:text-base md:text-lg
         cursor-pointer
+        ${variants[variant]}
         transition duration-300 ease-out
-        hover:bg-[var(--orange-insun)] hover:text-white
         active:scale-95
-      "
+      `}
     >
       <span className="whitespace-nowrap">{value}</span>
       <ArrowIcon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />

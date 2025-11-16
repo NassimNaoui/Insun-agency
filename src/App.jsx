@@ -7,8 +7,6 @@ import DecouvrirValeurs from "./pages/DecouvrirValeurs";
 import RejoinsNous from "./pages/RejoinsNous";
 import DecouvrirSimplifie from "./pages/DecouvrirSimplifie";
 
-import "./App.css";
-
 function App() {
   return (
     <>

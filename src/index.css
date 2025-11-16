@@ -10,6 +10,10 @@
   --text: "DM Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .font-title {
   font-family: var(--title);
 }
