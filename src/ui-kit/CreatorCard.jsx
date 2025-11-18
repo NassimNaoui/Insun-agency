@@ -1,5 +1,5 @@
 import PlusIcon from "../assets/SVG/icons/Plus circle.svg?react";
-import { formatViews } from "../formatNumber";
+import { formatNumbers } from "../utilities/formatNumberString";
 
 export default function CreatorCard({
   creatorName,
@@ -50,7 +50,7 @@ export default function CreatorCard({
                 className="w-4 sm:w-5 md:w-6"
               />
               <div className="font-text text-white text-sm sm:text-base md:text-lg">
-                {formatViews(totalFollowers)}
+                {formatNumbers(totalFollowers)}
               </div>
             </div>
             <div className="flex flex-row items-center gap-2 sm:gap-3">
@@ -60,7 +60,7 @@ export default function CreatorCard({
                 className="w-4 sm:w-5 md:w-6"
               />
               <div className="font-text text-white text-sm sm:text-base md:text-lg">
-                {formatViews(totalViews)}
+                {formatNumbers(totalViews)}
               </div>
             </div>
           </div>

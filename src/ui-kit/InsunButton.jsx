@@ -1,13 +1,29 @@
 import ArrowIcon from "../assets/SVG/icons/Arrow right.svg?react";
+import { formatString } from "../utilities/formatNumberString";
 
 function NavBarButton({ value, onClick }) {
+  const id = formatString(value);
+
   return (
     <a
       onClick={onClick}
-      href={`#${value}`}
-      className="bg-white/25 border-1 rounded-full text-white h-fit px-[24px]
-      py-[12px] transition duration-300 font-title ease-out hover:bg-[var(--orange-insun)]
-      focus:bg-[var(--orange-insun)]"
+      href={`#${id}`}
+      className="
+        bg-white/25 border-1 rounded-full text-white 
+        font-title transition duration-300 ease-out
+        hover:bg-[var(--orange-insun)] focus:bg-[var(--orange-insun)]
+        
+        /* base (mobile) */
+        px-4 py-2 text-sm
+        
+        /* tablette (md) */
+        md:px-5 md:py-2.5 md:text-base
+        
+        /* desktop (lg+) */
+        lg:px-6 lg:py-3 lg:text-lg
+
+        whitespace-nowrap
+      "
     >
       {value}
     </a>

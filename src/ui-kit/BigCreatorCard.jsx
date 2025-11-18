@@ -5,7 +5,7 @@ import tiktok from "../assets/SVG/icons/tiktok.svg?react";
 import twitch from "../assets/SVG/icons/twitch.svg?react";
 import youtube from "../assets/SVG/icons/youtube.svg?react";
 import instagram from "../assets/SVG/icons/instagram.svg?react";
-import { formatViews } from "../formatNumber";
+import { formatNumbers } from "../utilities/formatNumberString";
 import { CallToAction } from "./InsunButton";
 
 const socialNetworkIcons = {
@@ -92,7 +92,7 @@ function SocialNetworksKpis({ socialNetworksDetails }) {
               className="text-xs sm:text-base font-text text-[#1E1E1E]"
               key={socialNetwork}
             >
-              {formatViews(infos.followers)}
+              {formatNumbers(infos.followers)}
             </div>
           </div>
         ))}

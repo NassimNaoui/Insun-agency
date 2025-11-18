@@ -20,7 +20,7 @@ export default function Accueil() {
 
   return (
     <div
-      id="Accueil"
+      id="accueil"
       className="
         relative
         bg-[url(./src/assets/BACKGROUND/svg-accueil-fin.svg)] 

@@ -6,15 +6,15 @@ export default function Createurs() {
 
   return (
     <div
-      id="Créateurs"
+      id="createurs"
       className="relative min-h-screen w-screen flex bg-[url('./src/assets/BACKGROUND/svg-bottom-left.svg')] 
                  bg-no-repeat bg-cover bg-center -mt-px pb-5"
     >
       <div className="flex-1 flex flex-col items-center justify-evenly gap-5 mt-16 sm:mt-24 px-2 sm:px-8 md:px-12 lg:px-20">
-        <h1 className="self-start font-title text-white font-title text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl">
+        <h2 className="self-start font-title text-white font-title text-xl sm:text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl">
           Nos créateurs
-        </h1>
-        <div className="flex flex-col gap-5 items-center">
+        </h2>
+        <div className="flex flex-col gap-5 items-center mt-5 md:mt-10 lg:mt-20">
           <GridCreators
             selectedCreator={selectedCreator}
             setSelectedCreator={setSelectedCreator}
